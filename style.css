@@ -1,0 +1,105 @@
+/* --- Estilos Generales --- */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+header h1 {
+    margin: 0 0 10px 0;
+    font-size: 2.5em;
+}
+
+header p {
+    margin: 0;
+    font-size: 1.1em;
+    opacity: 0.9;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+    background-color: #333;
+    color: white;
+    font-size: 0.9em;
+}
+
+/* --- Estilos de la Galería --- */
+.gallery-container {
+    max-width: 1200px;
+    margin: 40px auto; /* Centra el contenedor principal de la galería */
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.gallery-grid {
+    display: grid; /* Usa CSS Grid para crear la cuadrícula de imágenes */
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); /* Columnas responsivas */
+    gap: 20px; /* Espacio entre las imágenes */
+    justify-content: center; /* Centra los ítems si no llenan la fila completa */
+}
+
+.gallery-item {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden; /* Oculta cualquier parte de la imagen que sobresalga */
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    display: flex; /* Para centrar el contenido y el título */
+    flex-direction: column; /* Organiza la imagen y el título en columna */
+}
+
+.gallery-item:hover {
+    transform: translateY(-5px); /* Efecto de "levantar" al pasar el ratón */
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.gallery-item img {
+    width: 100%; /* La imagen ocupa todo el ancho de su contenedor */
+    height: 200px; /* Altura fija para uniformidad */
+    object-fit: cover; /* Recorta la imagen para que cubra el área sin distorsionar */
+    display: block; /* Elimina espacio extra debajo de la imagen */
+}
+
+.image-title {
+    padding: 10px 15px;
+    font-size: 1.1em;
+    font-weight: bold;
+    color: #555;
+    text-align: center;
+    background-color: #f0f0f0;
+    border-top: 1px solid #eee;
+}
+
+/* Estilos para el mensaje si no hay imágenes */
+.no-images {
+    text-align: center;
+    font-size: 1.2em;
+    color: #666;
+    padding: 50px;
+    background-color: #ffe0b2; /* Fondo de alerta */
+    border: 1px dashed #ff9800;
+    border-radius: 8px;
+    margin: 30px auto;
+}
+
+.no-images-tip {
+    text-align: center;
+    font-size: 1em;
+    color: #888;
+    margin-top: 10px;
+}
